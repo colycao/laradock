@@ -1,9 +1,11 @@
-FROM mcr.microsoft.com/mssql/server:2017-latest-ubuntu
+FROM mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 
 ENV MSSQL_PID=Express
 ENV MSSQL_DATABASE=$MSSQL_DATABASE
 ENV ACCEPT_EULA=Y
 ENV SA_PASSWORD=$MSSQL_PASSWORD
+ENV MSSQL_LCID=1041
+ENV MSSQL_COLLATION=Japanese_CS_AS_KS_WS
 
 VOLUME /var/opt/mssql
 
